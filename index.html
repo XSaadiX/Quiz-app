@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App - OOP JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="quiz-screen">
+            <div class="quiz-header">
+                <h1 class="quiz-title">JavaScript & Web Development Quiz</h1>
+                <p class="quiz-description">
+                    Answer all questions below. You need 70% or higher to pass.
+                </p>
+                
+                <div class="quiz-controls">
+                    <button id="reset-btn" class="btn btn-secondary">
+                        🔄 Reset All
+                    </button>
+                    <button id="submit-btn" class="btn btn-primary" disabled>
+                        📤 Submit Quiz
+                    </button>
+                </div>
+
+                <div class="progress-container">
+                    <div class="progress-text">
+                        Answered: <span id="answered-count">0</span> / <span id="total-count">0</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="questions-container"></div>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <button id="submit-btn-bottom" class="btn btn-primary" disabled>
+                    📤 Submit Quiz
+                </button>
+            </div>
+        </div>
+
+        <div id="result-screen" class="result-screen hidden">
+            <div id="result-icon" class="result-icon"></div>
+            <h2 id="result-title" class="result-title"></h2>
+            <div class="result-score">
+                <span id="score-display" class="score-number">0</span>
+                <span class="score-total">/<span id="total-display">0</span></span>
+            </div>
+            <p id="result-percentage" class="result-percentage"></p>
+            <button id="retake-btn" class="btn btn-primary">
+                🔄 Take Quiz Again
+            </button>
+        </div>
+    </div>
+
+    <!-- Include JavaScript files -->
+    <script src="js/Question.js"></script>
+    <script src="js/MultipleChoiceQuestion.js"></script>
+    <script src="js/TrueFalseQuestion.js"></script>
+    <script src="js/Quiz.js"></script>
+    <script src="js/QuizApp.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
